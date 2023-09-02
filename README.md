@@ -29,6 +29,11 @@ text
 >>>>>>> f7dafb9 (bild tillagd)
 
 
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+
 
 
 
