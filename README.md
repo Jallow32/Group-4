@@ -12,7 +12,7 @@
 - Fourth item
 text
 
-
+[^1]: My reference.
 1st way : * * *
 
 2nd way : ***
@@ -29,10 +29,14 @@ text
 >>>>>>> f7dafb9 (bild tillagd)
 
 
+
 | Syntax      | Description |
 | ----------- | ----------- |
 | Header      | Title       |
 | Paragraph   | Text        |
+
+
+
 
 
 
@@ -55,7 +59,7 @@ This is __bold__ text.
 
 
 
-
+~~no~~
 
 
 ### Heading level 3
@@ -71,4 +75,13 @@ This is __bold__ text.
 - [ ] Saturn
 - [ ] Uranus
 - [ ] Neptune
+
 - [ ] Comet Haley
+
+
+x<sub>2</sub>
+x<sup>2</sup>
+
+
+Markdown  
+: Markdown is a plaintext language, which is simple and easy to learn.  
