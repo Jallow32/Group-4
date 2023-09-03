@@ -57,6 +57,11 @@ This is _italic_ text.
 This is **bold** text.
 This is __bold__ text.
 
+<ol>
+  <li>Detta är grupp 4.</li>
+    <p>FWK22</p>
+  <li> Grupp 4</li>
+</ol>
 
 
 ~~no~~
