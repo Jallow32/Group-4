@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import Fetchget from './Components/Fetchget';
 
 
 function App() {
 return (
-<div></div>)
+<div><Fetchget/></div>)
   
 }
 
