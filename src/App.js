@@ -1,11 +1,15 @@
 import React from 'react';
 import './App.css';
 import Fetchget from './Components/Fetchget';
+import Getcountries from './Components/Getcountries';
 
 
 function App() {
 return (
-<div><Fetchget/></div>)
+<div>
+<Fetchget/>
+<Getcountries/>
+</div>)
   
 }
 
