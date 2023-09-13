@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import axios from 'axios';
-
-
-// get characters filen
-
 import '../Components/Fetchget.css'
+
+
+// get characters filen 
+
 export default function Fetchget() {
   const [characters, setCharacters] = useState
 
