@@ -1,4 +1,41 @@
-body {
+/* body {
     background-image: url("https://media0.giphy.com/media/3owvJXPRVdfvynuxZS/giphy.gif");
     
-}
+} */
+
+
+.character-boxes {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .character-box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+  }
+  
+  .character-info {
+    text-align: center;
+  }
+  
+  .character-name {
+    font-weight: bold;
+  }
+  
+  .character-title {
+    font-style: italic;
+  }
+  
+  .character-family {
+    color: #777;
+  }
+  
+
+
+
+
+  
