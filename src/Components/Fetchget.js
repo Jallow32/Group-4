@@ -7,6 +7,7 @@ import '../Components/Fetchget.css'
 
 export default function Fetchget() {
   const [characters, setCharacters] = useState([]);
+  
 
   const fetchCharacters = async () => {
     try {
