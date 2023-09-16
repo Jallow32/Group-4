@@ -3,7 +3,7 @@
     
 } */
 
-
+/*
 .character-boxes {
     list-style: none;
     padding: 0;
@@ -33,9 +33,70 @@
   .character-family {
     color: #777;
   }
-  
+  */
 
 
+/* Body Styles */
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
 
+/* Header Styles */
+.header {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
 
-  
+/* Character List Styles */
+.character-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 20px;
+  gap: 20px;
+}
+
+.character-table {
+  width: 200px;
+}
+
+.character-row {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.character-row:hover {
+  transform: translateY(-5px);
+}
+
+.character-image {
+  max-width: 50px; /* Small image size */
+  height: auto;
+}
+
+/* Selected Character Styles */
+.character-details-container {
+  flex: 1;
+  display: none;
+}
+
+.character-details-container.visible {
+  display: block;
+}
+
+.selected-character {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
