@@ -22,12 +22,11 @@ const FirebaseFunctionTest = () => {
       <h1>Test Firebase Function from Another Project</h1>
       {response ? (
         <div>
-          <h2>Message:</h2>
-         <p>{response.newMessage}</p> 
-         <p>{response.newMessage2}</p> 
+          <h2>First Name:</h2>
+          <p>{response[0].firstName}</p>
 
-          <h2>Array2:</h2>
-          <pre>{JSON.stringify(response.data, null, 2)}</pre>
+          <h2>Last Name:</h2>
+          <p>{response[1].lastName}</p>
         </div>
       ) : (
         <p>Loading...</p>
