@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@material/card": "^14.0.0",
     "@mui/icons-material": "^5.14.9",
     "@mui/material": "^5.14.9",
     "@react-navigation/native-stack": "^6.9.13",
