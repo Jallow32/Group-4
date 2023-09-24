@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Footer from 'footer200';
 
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
@@ -182,6 +183,7 @@ export default function Fetchget() {
           </Card>
         )}
       </div>
+      <Footer />
     </div>
   );
 }

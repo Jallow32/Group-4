@@ -12,9 +12,9 @@ return (
 <div>
 <NavBar />
 <Routes>
-          <Route path="/" element={<Fetchget />} />
-          <Route path="/connection" element={<FirebaseFunctionTest />} />
         
+          <Route path="/" element={<FirebaseFunctionTest />} />
+          <Route path="/connection" element={<Fetchget/>} />
        </Routes>
 </div>)
   

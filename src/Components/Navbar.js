@@ -1,23 +1,47 @@
 import { Link } from 'react-router-dom';
-import {firebaseFunctionTest as fire}  from './Connect';
+import { firebaseFunctionTest as fire } from './Connect';
 import React from 'react';
+
+const navStyle = {
+  backgroundColor: 'darkblue',
+  color: 'white',
+  padding: '10px',
+};
+
+const ulStyle = {
+  listStyleType: 'none',
+  padding: '0',
+  display: 'flex',
+  justifyContent: 'center',
+};
+
+const liStyle = {
+  margin: '0 10px',
+};
+
+const linkStyle = {
+  textDecoration: 'none',
+  color: 'white',
+  fontWeight: 'bold',
+};
+
 const NavBar = () => {
- return (
- <nav>
-       <ul>
-          <li>
-             <Link to="/">Home</Link>
-          </li>
-          <li>
-             <Link to="/Connection">Connection</Link>
-          </li>
-          <li>
-             <Link to="/Signup">User sign up</Link>
-          </li>
-          
-       </ul>
- </nav>
- );
+  return (
+    <nav style={navStyle}>
+      <ul style={ulStyle}>
+        <li style={liStyle}>
+          <Link to="/" style={linkStyle}>
+            Home
+          </Link>
+        </li>
+        <li style={liStyle}>
+          <Link to="/Connection" style={linkStyle}>
+            Connection
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  );
 };
 
 export default NavBar;
