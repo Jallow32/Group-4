@@ -188,14 +188,14 @@ export default function FirebaseFunctionTest() {
                     onChange={handleInputChange}
                   />
                 </div>
-                <div>
-                  <textarea
-                    name="text"
-                    placeholder="Review"
-                    value={newComment.text}
-                    onChange={handleInputChange}
-                  />
-                </div>
+                <textarea
+  name="comment"
+  placeholder="Review"
+  value={newComment.comment}
+  onChange={handleInputChange}
+/>
+
+            
                 <div>
                   <input
                     type="number"
