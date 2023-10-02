@@ -35,8 +35,8 @@ const NavBar = () => {
           </Link>
         </li>
         <li style={liStyle}>
-          <Link to="/Connection" style={linkStyle}>
-            Connection
+          <Link to="/live" style={linkStyle}>
+            CharacterPage
           </Link>
         </li>
       </ul>

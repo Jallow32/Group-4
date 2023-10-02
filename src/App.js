@@ -14,7 +14,7 @@ return (
 <Routes>
         
           <Route path="/" element={<FirebaseFunctionTest />} />
-          <Route path="/connection" element={<Fetchget/>} />
+          <Route path="/live" element={<Fetchget/>} />
        </Routes>
 </div>)
   

@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-
-
-
 export default function FirebaseFunctionTest() {
   const [characters, setCharacters] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -15,14 +12,14 @@ export default function FirebaseFunctionTest() {
     rating: "",
   });
 
-
   const fetchCharacters = async () => {
     try {
       const response = await axios.get(
-        "https://api-v6ywsuyy3a-uc.a.run.app/data"
+        "https://api-v6ywsuyy3a-uc.a.run.app/data/characters"
       );
       const responseData = response.data;
       setCharacters(responseData);
+      console.log(responseData);
       setIsLoading(false);
     } catch (error) {
       console.error("Error fetching data from Firebase Function:", error);
@@ -33,7 +30,7 @@ export default function FirebaseFunctionTest() {
   const fetchCharacterComments = async (characterId) => {
     try {
       const response = await axios.get(
-        `https://api-v6ywsuyy3a-uc.a.run.app/data/${characterId}/comments`
+        `https://api-v6ywsuyy3a-uc.a.run.app/data/${characterId}/reviews`
       );
       const commentData = response.data;
       setComments(commentData);
@@ -58,7 +55,7 @@ export default function FirebaseFunctionTest() {
   const submitComment = async () => {
     try {
       const response = await axios.post(
-        `https://api-v6ywsuyy3a-uc.a.run.app/data/${selectedCharacter.id}/comments`,
+        `https://api-v6ywsuyy3a-uc.a.run.app/data/${selectedCharacter.id}/reviews`,
         newComment
       );
       const comment = response.data;
@@ -70,6 +67,18 @@ export default function FirebaseFunctionTest() {
       });
     } catch (error) {
       console.error("Error submitting comment:", error);
+    }
+  };
+
+  const deleteComment = async (reviewId) => {
+    try {
+      await axios.delete(
+        `https://api-v6ywsuyy3a-uc.a.run.app/data/${selectedCharacter.id}/reviews/${reviewId}`
+      );
+      // Remove the deleted comment from the state
+      setComments(comments.filter((comment) => comment.id !== reviewId));
+    } catch (error) {
+      console.error("Error deleting comment:", error);
     }
   };
 
@@ -87,7 +96,7 @@ export default function FirebaseFunctionTest() {
         flexDirection: "row",
         height: "100vh",
       }}
-    > 
+    >
       <div
         className="character-list-container"
         style={{
@@ -125,7 +134,8 @@ export default function FirebaseFunctionTest() {
                     key={character.id}
                     style={{
                       backgroundColor:
-                        selectedCharacter && selectedCharacter.id === character.id
+                        selectedCharacter &&
+                        selectedCharacter.id === character.id
                           ? "lightblue"
                           : "white",
                       cursor: "pointer",
@@ -166,11 +176,13 @@ export default function FirebaseFunctionTest() {
               <div>
                 <h2>Reviews</h2>
                 <ul>
-                  {comments.map((comment, index) => (
-                    <li key={index}>
+                  {comments.map((comment) => (
+                    <li key={comment.id}>
                       <p>username: {comment.username}</p>
                       <p>review: {comment.text}</p>
                       <p>rating: {comment.rating}</p>
+                      {/* Add a delete button for each comment */}
+                      <button onClick={() => deleteComment(comment.id)}>Delete</button>
                     </li>
                   ))}
                 </ul>
@@ -189,13 +201,11 @@ export default function FirebaseFunctionTest() {
                   />
                 </div>
                 <textarea
-  name="comment"
-  placeholder="Review"
-  value={newComment.comment}
-  onChange={handleInputChange}
-/>
-
-            
+                  name="text"
+                  placeholder="Review"
+                  value={newComment.text}
+                  onChange={handleInputChange}
+                />
                 <div>
                   <input
                     type="number"
@@ -213,7 +223,6 @@ export default function FirebaseFunctionTest() {
           </>
         )}
       </div>
-    
     </div>
   );
 }
