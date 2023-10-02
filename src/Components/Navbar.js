@@ -39,6 +39,11 @@ const NavBar = () => {
             CharacterPage
           </Link>
         </li>
+        <li style={liStyle}>
+          <Link to="/post" style={linkStyle}>
+            Posting Character
+          </Link>
+        </li>
       </ul>
     </nav>
   );
