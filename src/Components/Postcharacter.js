@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./CharacterForm.css"; 
 
 export default function CharacterForm() {
   const [characterData, setCharacterData] = useState({
@@ -44,80 +45,63 @@ export default function CharacterForm() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     postCharacter(characterData);
   };
 
   return (
-    <div>
+    <div className="character-form">
       <h2>Add a Character</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <input
-            type="text"
-            name="firstName"
-            placeholder="First Name"
-            value={characterData.firstName}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            name="lastName"
-            placeholder="Last Name"
-            value={characterData.lastName}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            name="fullName"
-            placeholder="Full Name"
-            value={characterData.fullName}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            name="title"
-            placeholder="Title"
-            value={characterData.title}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            name="family"
-            placeholder="Family"
-            value={characterData.family}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            name="image"
-            placeholder="Image"
-            value={characterData.image}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            name="imageUrl"
-            placeholder="Image URL"
-            value={characterData.imageUrl}
-            onChange={handleInputChange}
-          />
-        </div>
-        <div>
-          <button type="submit">Add Character</button>
-        </div>
+        <input
+          type="text"
+          name="firstName"
+          placeholder="First Name"
+          value={characterData.firstName}
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          name="lastName"
+          placeholder="Last Name"
+          value={characterData.lastName}
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          name="fullName"
+          placeholder="Full Name"
+          value={characterData.fullName}
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          name="title"
+          placeholder="Title"
+          value={characterData.title}
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          name="family"
+          placeholder="Family"
+          value={characterData.family}
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          name="image"
+          placeholder="Image"
+          value={characterData.image}
+          onChange={handleInputChange}
+        />
+        <input
+          type="text"
+          name="imageUrl"
+          placeholder="Image URL"
+          value={characterData.imageUrl}
+          onChange={handleInputChange}
+        />
+        <button type="submit">Add Character</button>
       </form>
     </div>
   );

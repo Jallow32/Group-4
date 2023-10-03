@@ -1,0 +1,35 @@
+.character-form {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .character-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .character-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .character-form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .character-form button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .character-form button:hover {
+    background-color: #0056b3;
+  }
+  
