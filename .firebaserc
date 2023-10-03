@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "frontend-group-4"
-  }
+    "default": "game-of-thrones-a5202",
+    "hosting": "game-of-thrones-a5202"
+  },
+  "targets": {},
+  "etags": {}
 }
