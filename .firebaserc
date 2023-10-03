@@ -1,8 +1,5 @@
 {
   "projects": {
-    "default": "game-of-thrones-a5202",
-    "hosting": "game-of-thrones-a5202"
-  },
-  "targets": {},
-  "etags": {}
+    "default": "game-of-throne-6ca95"
+  }
 }
