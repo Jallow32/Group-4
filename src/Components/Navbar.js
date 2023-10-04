@@ -41,7 +41,7 @@ const NavBar = () => {
         </li>
         <li style={liStyle}>
           <Link to="/post" style={linkStyle}>
-            Posting Character
+            Character posting
           </Link>
         </li>
       </ul>
