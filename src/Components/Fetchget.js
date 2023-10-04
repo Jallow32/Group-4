@@ -12,7 +12,7 @@ export default function Fetchget() {
   const [selectedCharacter, setSelectedCharacter] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-  const [reviews, setReviews] = useState([]);
+  // const [reviews, setReviews] = useState([]);
 
   const itemsPerPage = 10;
   const apiUrl = 'https://api-v6ywsuyy3a-uc.a.run.app/data/characters';
@@ -48,15 +48,15 @@ export default function Fetchget() {
     }
   };
 
-  const fetchReviews = async (characterId) => {
-    try {
-      const response = await axios.get(`${apiUrl}/${characterId}/reviews`);
-      setReviews(response.data);
-    } catch (error) {
-      console.error(error);
-      setReviews([]);
-    }
-  };
+  // const fetchReviews = async (characterId) => {
+  //   try {
+  //     const response = await axios.get(`${apiUrl}/${characterId}/reviews`);
+  //     setReviews(response.data);
+  //   } catch (error) {
+  //     console.error(error);
+  //     setReviews([]);
+  //   }
+  // };
   useEffect(() => {
     fetchCharacters();
   }, [currentPage]);

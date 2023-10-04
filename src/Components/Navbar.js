@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { firebaseFunctionTest as fire } from './Connect';
+// import { firebaseFunctionTest as fire } from './Connect';
 import React from 'react';
 
 const navStyle = {
