@@ -6,7 +6,6 @@ export default function FirebaseFunctionTest() {
   const [isLoading, setIsLoading] = useState(true);
   const [selectedCharacter, setSelectedCharacter] = useState(null);
   const [comments, setComments] = useState([]);
-  const [hello, setHello] = usestate([]);
   const [newComment, setNewComment] = useState({
     username: "",
     text: "",
